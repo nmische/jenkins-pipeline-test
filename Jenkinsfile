@@ -6,5 +6,13 @@ pipeline {
                 echo 'Hello world!' 
             }
         }
+        stage('Test Master') {
+            when {
+                branch 'master'
+            }
+            steps {
+                echo 'Master branch!' 
+            }
+        }
     }
 }
